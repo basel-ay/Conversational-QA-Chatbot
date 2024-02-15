@@ -31,7 +31,7 @@ def get_chatmodel_responses(question):
     # Pass the question to our openai model
     answer = chat(st.session_state["FlowMessages"])
 
-    st.session_state["flowmessages"].append(AIMessage(content=answer.content))
+    st.session_state["FlowMessages"].append(AIMessage(content=answer.content))
 
     return answer.content
 
